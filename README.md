@@ -7,7 +7,7 @@
 ```sh
 sudo curl https://raw.githubusercontent.com/ahmetkapikiran/TunnelBlick-Login/master/vpnlogin.py > /usr/bin/vpnlogin
 chmod +x /usr/bin/vpnlogin
-vim ~/secretkey.txt içine secret yazılmalı.
+vim ~/secretkey.txt içine 16 haneli secret yazılmalı.
 ```
 
 ## Otomatik login olmak için terminale
