@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import hmac, base64, struct, hashlib, time, sys
+import hmac, base64, struct, hashlib, time, sys, os
 import re, sys, subprocess
 def get_hotp_token(secret, intervals_no):
     key = base64.b32decode(secret, True)
@@ -38,8 +38,10 @@ def launch_vpn(name):
     cmd = 'tell app "Tunnelblick" to connect "%s"\n' % name
  
     sub_proc.communicate(cmd)
-secretFile = open('./secretkey.txt')
-my_secret = secretFile.read().strip()
+user_home = os.getenv("HOME")
+secret_file = open(user_home+'/secretkey.txt')
+my_secret = secret_file.read().strip()
+print my_secret
 my_token = get_totp_token(my_secret)
 
 write_keychain_item('Tunnelblick-Auth-MyVPN', 'password', my_token)
