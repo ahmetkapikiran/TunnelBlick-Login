@@ -10,7 +10,14 @@ chmod +x /usr/bin/vpnlogin
 vim ~/secretkey.txt içine 16 haneli secret yazılmalı.
 ```
 
-## Otomatik login olmak için terminale
+## Spotlight üzerinden vpn bağlantısını kurmak için,
+
+1. vpnlogin.zip dosyasını açın.
+2. İçerisinden çıkan dosyayı Applications altına kopyalayın.
+3. Applications klasörüne gidin ve vpnlogin dosyasını sağ tıklayıp open'ı tıklayın.
+4. Spotlight üzerinden vpnlogin yazarak vpn bağlantısını kurabilirsiniz.
+
+## Terminal için
 ```sh
 vpnlogin
 ```
